@@ -15,3 +15,9 @@
     - Place logic in function
 - A function can return a JSX expression
     - Nothing will show up if you return undefined, null, or a bool
+- You cannot duplicate let variables
+- var is function scoped, let and const is block level scoped
+- adding `arguments` in a function shows all parameter values. Does not show in es5.
+- Make sure that you re-render your template by placing your tempmlate and reactDOM.render method in a function. 
+- React uses virtual dom to be efficient and not rewrite everything
+- https://reactjs.org/docs/events.html 
