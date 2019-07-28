@@ -4,7 +4,7 @@
     - `yarn global add babel-cli`
     - `yarn add babel-preset-react babel-preset-env`
 
-#What I have learned #
+# What I have learned #
 - Use Babel to compile JSX code. 
 - `babel input.js --out-file=out.js --presets=env,react --watch`
 - Add Babel Es6/Es7 vscode plugin for better support for JSX. 
@@ -21,3 +21,6 @@
 - Make sure that you re-render your template by placing your tempmlate and reactDOM.render method in a function. 
 - React uses virtual dom to be efficient and not rewrite everything
 - https://reactjs.org/docs/events.html 
+- Form submit values `e.target.elements.option.value'`
+- use `!!` to see if a value is set
+- use `super()` when setting up a class inherited from a parent class. call `super` as this on parent class. 

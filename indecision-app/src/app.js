@@ -18,14 +18,23 @@ const onFormSubmit = (e) => {
        render(); 
    }
    
-}
+} 
 
 const onRemoveAll = () =>{
     app.options = []; 
     render(); 
 };
 
+const onMakeDecision = () => {
+    const randomNum = Math.floor(Math.random() * app.options.length); 
+    const option = app.options[randomNum];
+    alert(option); 
+}
+
+
 const appRoot = document.getElementById('app');
+//const numbers = [55, 101, 1000];
+
 const render = () =>{
 
 // JSX - JavaScript XML
@@ -34,11 +43,19 @@ const template = (
         <h1>{app.title}</h1>
         { app.subtitle && <p>{app.subtitle}</p> }
         <p>{app.options.length > 0? 'Here are your options' : 'No Options'}</p>
-        <p>{app.options.length}</p>
+        <button onClick={onMakeDecision} disabled={app.options.length === 0}>What should I do?</button>
         <button onClick={onRemoveAll}>Remove All</button>
+         {
+        //     numbers.map((number, index)=> {
+        //         return <p key={index}>Number: {number}</p>;
+        //     })
+         }   
+             
         <ol>
-            <li>Item one</li>
-            <li>Item two</li>
+        {
+            app.options.map((option, index)=> <li key={index}>{option}</li>)
+        }
+    
         </ol>
         <form onSubmit={onFormSubmit}>
             <input type="text" name="option"/>
