@@ -23,4 +23,14 @@
 - https://reactjs.org/docs/events.html 
 - Form submit values `e.target.elements.option.value'`
 - use `!!` to see if a value is set
-- use `super()` when setting up a class inherited from a parent class. call `super` as this on parent class. 
+- use `super()` when setting up a class inherited from a parent class. call `super` as this on parent class.
+- `this.setState((prevState)=>{ return { prop: prevState + 1}  }) `
+    - Get don't set prevState!
+- props and functions can be accessed through child components
+    - From parent to child you create a method and add into a child component method
+    - the parent function can have a method with a parameter which can be used by a child component (e.g child send data to parent)
+        - The child component can then call the function using the props keyword
+- if you need to bind a method to `this`, this is handled in the constructor
+  - The constructor and super method must pass props
+
+
