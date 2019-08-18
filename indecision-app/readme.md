@@ -32,5 +32,8 @@
         - The child component can then call the function using the props keyword
 - if you need to bind a method to `this`, this is handled in the constructor
   - The constructor and super method must pass props
+- functional components are stupid and do not return 'this', you have to pass in props as a parameter
+    - They are faster and should be used if only returning jsx
+- `object.defaultProps = {} `
 
 
